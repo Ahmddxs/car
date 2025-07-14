@@ -1,0 +1,1534 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carnicería Halal en Murcia - Carnicería Charcutería Mariam</title>
+    <meta name="description" content="La mejor carnicería halal en Murcia. Ofrecemos carne de ternera, cordero y pollo de la más alta calidad, con certificación halal. Visítanos en C. Poeta Miguel Hernandez, 30006 Murcia.">
+    <meta name="robots" content="index, follow">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-gold: #D4AF37;
+            --rich-brown: #2C1810;
+            --warm-brown: #8B4513;
+            --light-brown: #6B5B4F;
+            --cream: #FDFCFA;
+            --soft-cream: #F8F6F3;
+            --deep-gold: #B8941F;
+        }
+
+        .font-playfair { font-family: 'Playfair Display', serif; }
+        .font-cormorant { font-family: 'Cormorant Garamond', serif; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--cream);
+            color: var(--rich-brown);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .luxury-gradient {
+            background: linear-gradient(135deg, var(--primary-gold) 0%, var(--deep-gold) 100%);
+        }
+
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .backdrop-blur {
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .hover-lift {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .elegant-border {
+            position: relative;
+        }
+
+        .elegant-border::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, var(--primary-gold), transparent, var(--primary-gold));
+            padding: 2px;
+            border-radius: inherit;
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask-composite: exclude;
+            -webkit-mask-composite: xor;
+        }
+
+        .floating-element {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+
+        .shimmer {
+            background: linear-gradient(45deg, transparent 30%, rgba(212, 175, 55, 0.3) 50%, transparent 70%);
+            background-size: 200% 100%;
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+
+        .luxury-card {
+            background: linear-gradient(145deg, #ffffff 0%, #f8f6f3 100%);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+        }
+
+        /* Simplified Navbar Styles */
+        .navbar-simple {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .navbar-simple.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .nav-link {
+            position: relative;
+            color: var(--rich-brown);
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            background: linear-gradient(135deg, var(--primary-gold) 0%, var(--deep-gold) 100%);
+            color: white;
+            transform: translateY(-1px);
+        }
+
+        .mobile-menu-simple {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            height: 100vh;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px);
+            transition: right 0.3s ease;
+            z-index: 1000;
+        }
+
+        .mobile-menu-simple.open {
+            right: 0;
+        }
+
+        .mobile-nav-link {
+            display: block;
+            padding: 1rem 2rem;
+            color: var(--rich-brown);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+
+        .mobile-nav-link:hover, .mobile-nav-link.active {
+            background: linear-gradient(135deg, var(--primary-gold) 0%, var(--deep-gold) 100%);
+            color: white;
+        }
+
+        /* Product Card Styles */
+        .product-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 48px rgba(0,0,0,0.12);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover .product-image {
+            transform: scale(1.05);
+        }
+
+        .product-overlay {
+            background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.7) 100%);
+        }
+
+        /* Filter Styles */
+        .filter-button {
+            padding: 0.75rem 1.5rem;
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            background: transparent;
+            color: var(--rich-brown);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .filter-button:hover, .filter-button.active {
+            background: linear-gradient(135deg, var(--primary-gold) 0%, var(--deep-gold) 100%);
+            color: white;
+            border-color: transparent;
+        }
+
+        /* Hero Styles */
+        .hero-overlay {
+            background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(44,24,16,0.6) 50%, rgba(0,0,0,0.4) 100%);
+        }
+
+        .hero-title {
+            animation: fadeInDown 1s ease-out forwards;
+        }
+
+        .hero-subtitle {
+            animation: fadeInUp 1s ease-out 0.5s forwards;
+            opacity: 0;
+        }
+
+        .hero-button {
+            animation: pulse 2s infinite, fadeInUp 1s ease-out 1s forwards;
+            opacity: 0;
+        }
+
+        .scroll-down-arrow {
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .premium-button {
+            background: linear-gradient(135deg, var(--primary-gold) 0%, var(--deep-gold) 100%);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .premium-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .premium-button:hover::before {
+            left: 100%;
+        }
+
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--primary-gold), transparent);
+            margin: 3rem 0;
+        }
+
+        .luxury-text {
+            background: linear-gradient(135deg, var(--primary-gold) 0%, var(--deep-gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .elegant-shadow {
+            box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Mobile Optimizations */
+        @media (max-width: 768px) {
+            .hover-lift:hover {
+                transform: translateY(-3px);
+            }
+            
+            .product-card:hover {
+                transform: translateY(-4px);
+            }
+            
+            .nav-link {
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            width: 24px;
+            height: 18px;
+            justify-content: space-between;
+        }
+
+        .hamburger span {
+            display: block;
+            height: 2px;
+            width: 100%;
+            background: var(--rich-brown);
+            border-radius: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger.open span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .hamburger.open span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.open span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+
+        /* Badge Styles */
+        .halal-badge {
+            display: inline-flex;
+            align-items: center;
+            background: linear-gradient(135deg, var(--primary-gold) 0%, var(--deep-gold) 100%);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Footer Styles */
+        .footer-premium {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+            position: relative;
+        }
+
+        .footer-premium::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--primary-gold), transparent);
+        }
+
+        .footer-link {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: var(--primary-gold);
+            transform: translateX(5px);
+        }
+
+        .footer-social {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.5rem;
+            height: 2.5rem;
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 50%;
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin: 0 0.25rem;
+        }
+
+        .footer-social:hover {
+            background: linear-gradient(135deg, var(--primary-gold) 0%, var(--deep-gold) 100%);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Testimonial Styles */
+        .testimonial-card {
+            background: linear-gradient(145deg, #ffffff 0%, #f8f6f3 100%);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            border-radius: 16px;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-size: 4rem;
+            color: rgba(212, 175, 55, 0.2);
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+
+        .star-rating {
+            color: var(--primary-gold);
+        }
+
+        .gourmet-image {
+            height: 350px;
+        }
+    </style>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Butcher",
+      "name": "Carnicería Charcutería Mariam",
+      "description": "La mejor carnicería halal en Murcia. Ofrecemos carne de ternera, cordero y pollo de la más alta calidad, con certificación halal. Visítanos en C. Poeta Miguel Hernandez, 30006 Murcia.",
+      "image": "https://www.carniceriamariam.com/Hero.png",
+      "@id": "https://www.carniceriamariam.com",
+      "url": "https://www.carniceriamariam.com",
+      "telephone": "+34 632 85 94 00",
+      "priceRange": "€€",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "C. Poeta Miguel Hernandez, 30006 Murcia, Spain",
+        "addressLocality": "Murcia",
+        "postalCode": "30006",
+        "addressCountry": "ES"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 37.9838,
+        "longitude": -1.1307
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "09:00",
+          "closes": "21:00"
+        }
+      ],
+      "servesCuisine": "Halal",
+      "review": [
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Ahmed Hassan"
+          },
+          "reviewBody": "La calidad de la carne es excepcional. Como familia musulmana, es difícil encontrar productos halal de esta calidad. Mariam siempre nos atiende con profesionalidad y cariño."
+        },
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Fatima López"
+          },
+          "reviewBody": "El cordero que compramos para el Eid fue perfecto. La carne estaba fresca, bien preparada y el sabor era extraordinario. Sin duda, la mejor carnicería de Murcia."
+        },
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Mohammed Benali"
+          },
+          "reviewBody": "Productos artesanales de primera calidad. El chorizo halal es una delicia única. La atención personalizada hace que cada visita sea especial."
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Simplified Navigation -->
+    <nav id="navbar" class="navbar-simple fixed top-0 w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 lg:h-20">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="font-playfair text-lg lg:text-xl font-medium">
+                        <span class="luxury-text">Carnicería</span>
+                        <span class="text-gray-800 ml-2">Mariam</span>
+                        <span class="halal-badge ml-3">
+                            <i class="fas fa-star mr-1"></i>
+                            Halal
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-2">
+                    <a href="#home" class="nav-link active" data-section="home">
+                        <i class="fas fa-home mr-2"></i>Inicio
+                    </a>
+                    <a href="#catalog" class="nav-link" data-section="catalog">
+                        <i class="fas fa-th-large mr-2"></i>Catálogo
+                    </a>
+                    <a href="#about" class="nav-link" data-section="about">
+                        <i class="fas fa-info-circle mr-2"></i>Nosotros
+                    </a>
+                    <a href="#testimonials" class="nav-link" data-section="testimonials">
+                        <i class="fas fa-comments mr-2"></i>Testimonios
+                    </a>
+                    <a href="#contact" class="nav-link" data-section="contact">
+                        <i class="fas fa-phone mr-2"></i>Contacto
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="hamburger p-2">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu-simple">
+        <div class="pt-20 p-4">
+            <a href="#home" class="mobile-nav-link active" data-section="home">
+                <i class="fas fa-home mr-3"></i>Inicio
+            </a>
+            <a href="#catalog" class="mobile-nav-link" data-section="catalog">
+                <i class="fas fa-th-large mr-3"></i>Catálogo
+            </a>
+            <a href="#about" class="mobile-nav-link" data-section="about">
+                <i class="fas fa-info-circle mr-3"></i>Nosotros
+            </a>
+            <a href="#testimonials" class="mobile-nav-link" data-section="testimonials">
+                <i class="fas fa-comments mr-3"></i>Testimonios
+            </a>
+            <a href="#contact" class="mobile-nav-link" data-section="contact">
+                <i class="fas fa-phone mr-3"></i>Contacto
+            </a>
+            <div class="mt-8 px-4">
+                <div class="text-center">
+                    <div class="text-sm text-gray-600 mb-2">Horarios</div>
+                    <div class="text-gray-800 font-medium">Lun-Sáb: 9:00-20:00</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center text-center overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="Hero.png" 
+                 alt="Interior de la Carnicería Halal Mariam en Murcia" 
+                 class="w-full h-full object-cover">
+            <div class="hero-overlay absolute inset-0"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-32">
+            <div class="max-w-4xl mx-auto">
+                <div class="space-y-8">
+                    <h1 class="font-playfair text-4xl md:text-6xl lg:text-7xl font-light text-white leading-tight text-shadow hero-title">
+                        Carnicería Halal en
+                        <span class="block italic luxury-text mt-2">Murcia</span>
+                    </h1>
+                    
+                    <p class="font-cormorant text-xl lg:text-2xl text-white text-opacity-90 leading-relaxed max-w-3xl mx-auto hero-subtitle">
+                        En Carnicería Mariam, tu carnicería halal en Murcia, encontrarás cortes frescos certificados, directos de granjas locales a tu mesa. Tradición artesanal murciana con la calidad que tu familia merece.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-6 items-center justify-center pt-6">
+                        <button onclick="scrollToSection('catalog')" class="premium-button group text-white hover:text-yellow-100 px-8 py-4 text-lg transition-all duration-300 uppercase tracking-wider flex items-center font-medium font-inter elegant-shadow rounded-lg hero-button">
+                            <span class="relative z-10">VER PRODUCTOS</span>
+                            <i class="fas fa-arrow-right ml-3 group-hover:translate-x-1 transition-transform relative z-10"></i>
+                        </button>
+                        
+                        <div class="flex items-center text-white text-opacity-70 text-sm font-inter hero-subtitle">
+                            <i class="fas fa-map-marker-alt mr-2 text-yellow-300"></i>
+                            <span class="uppercase tracking-wider">Murcia, España</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Floating Certification Badge -->
+        <div class="floating-element absolute bottom-8 right-8 luxury-card p-6 elegant-shadow hidden lg:block">
+            <div class="text-center">
+                <div class="text-4xl font-light luxury-text mb-2 font-playfair">Halal</div>
+                <div class="text-sm text-gray-600 uppercase tracking-wider font-inter font-medium">Certificado</div>
+                <div class="w-12 h-0.5 bg-gradient-to-r from-transparent via-yellow-500 to-transparent mx-auto mt-3"></div>
+            </div>
+        </div>
+
+        <!-- Scroll Down Arrow -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20">
+            <a href="#catalog" class="scroll-down-arrow text-white text-3xl">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Catalog Section -->
+    <section id="catalog" class="py-20">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="font-playfair text-4xl lg:text-5xl font-light text-gray-800 mb-6">
+                    Nuestros Productos
+                </h2>
+                <p class="font-cormorant text-xl text-gray-600 max-w-3xl mx-auto">
+                    Selección premium de carnes halal frescas, preparadas con maestría artesanal 
+                    y los más altos estándares de calidad
+                </p>
+                <div class="section-divider w-24 mx-auto"></div>
+            </div>
+
+
+
+            <!-- Products Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Product 1: Cordero Premium -->
+                <div class="product-card hover-lift" data-category="fresh-meat premium">
+                    <div class="relative overflow-hidden">
+                        <img src="ChatGPT Image Jun 26, 2025, 10_24_07 PM.png" 
+                             alt="Pollo Entero Halal en nuestra carnicería de Murcia" class="product-image">
+                        <div class="absolute top-4 left-4">
+                            <span class="halal-badge">
+                                <i class="fas fa-leaf mr-1"></i>Fresco
+                            </span>
+                        </div>
+
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-playfair text-xl font-medium text-gray-800 mb-2">Pollo Entero</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-2">
+                            Pollo fresco y tierno, ideal para asar, guisar o a la parrilla. Criado con los más altos estándares de calidad.
+                        </p>
+                        <div class="flex justify-between items-center mb-4">
+
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <button class="premium-button text-white px-4 py-2 rounded-lg text-sm font-medium">
+                                <i class="fas fa-shopping-cart mr-2"></i>Consultar
+                            </button>
+                            <button class="text-gray-400 hover:text-yellow-600 transition-colors text-xl">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2: Ternera Selecta -->
+                <div class="product-card hover-lift" data-category="fresh-meat">
+                    <div class="relative overflow-hidden">
+                        <img src="ChatGPT Image Jun 26, 2025, 10_35_08 PM.png" 
+                             alt="Carne de Res Premium Halal en Murcia" class="product-image">
+                        <div class="absolute top-4 left-4">
+                            <span class="halal-badge">
+                                <i class="fas fa-leaf mr-1"></i>Fresco
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-playfair text-xl font-medium text-gray-800 mb-2">Carne de Res Premium</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-2">
+                            Cortes selectos de carne de res, perfectos para estofados, asados o barbacoas. Calidad garantizada.
+                        </p>
+                        <div class="flex justify-between items-center mb-4">
+
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <button class="premium-button text-white px-4 py-2 rounded-lg text-sm font-medium">
+                                <i class="fas fa-shopping-cart mr-2"></i>Consultar
+                            </button>
+                            <button class="text-gray-400 hover:text-yellow-600 transition-colors text-xl">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3: Pollo Campero -->
+                <div class="product-card hover-lift" data-category="fresh-meat">
+                    <div class="relative overflow-hidden">
+                        <img src="ChatGPT Image Jun 26, 2025, 11_16_57 PM.png" 
+                             alt="Cordero Lechal Halal de nuestra carnicería en Murcia" class="product-image">
+                        <div class="absolute top-4 left-4">
+                            <span class="halal-badge">
+                                <i class="fas fa-leaf mr-1"></i>Fresco
+                            </span>
+                        </div>
+
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-playfair text-xl font-medium text-gray-800 mb-2">Cordero Lechal</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-2">
+                            Cordero joven y tierno, ideal para asados. Sabor suave y textura delicada.
+                        </p>
+                        <div class="flex justify-between items-center mb-4">
+
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <button class="premium-button text-white px-4 py-2 rounded-lg text-sm font-medium">
+                                <i class="fas fa-shopping-cart mr-2"></i>Consultar
+                            </button>
+                            <button class="text-gray-400 hover:text-yellow-600 transition-colors text-xl">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4: Chorizo Halal Artesanal -->
+                <div class="product-card hover-lift" data-category="processed premium">
+                    <div class="relative overflow-hidden">
+                        <img src="ChatGPT Image Jul 12, 2025, 12_37_45 AM.png" 
+                             alt="Salchichas Artesanales Halal hechas en nuestra carnicería de Murcia" class="product-image">
+                        <div class="absolute top-4 left-4">
+                            <span class="halal-badge">
+                                <i class="fas fa-hand-holding mr-1"></i>Artesanal
+                            </span>
+                        </div>
+
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-playfair text-xl font-medium text-gray-800 mb-2">Salchichas Artesanales</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-2">
+                            Salchichas caseras elaboradas con carne de primera calidad y especias naturales. Perfectas para cualquier ocasión.
+                        </p>
+                        <div class="flex justify-between items-center mb-4">
+
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <button class="premium-button text-white px-4 py-2 rounded-lg text-sm font-medium">
+                                <i class="fas fa-shopping-cart mr-2"></i>Consultar
+                            </button>
+                            <button class="text-gray-400 hover:text-yellow-600 transition-colors text-xl">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <!-- Call to Action -->
+            <div class="text-center mt-16">
+                <p class="font-cormorant text-lg text-gray-600 mb-6">
+                    ¿No encuentras lo que buscas? Consulta nuestro catálogo completo
+                </p>
+                <button onclick="scrollToSection('contact')" class="premium-button text-white px-8 py-4 text-lg rounded-lg font-medium">
+                    <i class="fas fa-phone mr-2"></i>Contactar Ahora
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-8">
+                    <h2 class="font-playfair text-4xl lg:text-5xl font-light text-gray-800">
+                        Nuestra Historia
+                    </h2>
+                    <div class="space-y-6 font-cormorant text-lg text-gray-600 leading-relaxed">
+                        <p>
+                            En Carnicería Charcutería Mariam, cada día escribimos una nueva página en la historia 
+                            de la excelencia culinaria halal en Murcia. Nuestra pasión por la calidad superior 
+                            y el respeto profundo por las tradiciones nos han convertido en la elección preferida 
+                            de los verdaderos conocedores.
+                        </p>
+                        <p>
+                            Cada producto es una promesa cumplida: calidad excepcional, frescura garantizada 
+                            y el sabor auténtico que solo puede ofrecer la maestría artesanal combinada con 
+                            los más estrictos estándares halal que honran nuestra herencia culinaria.
+                        </p>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-8 pt-8">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold luxury-text font-playfair">15+</div>
+                            <div class="text-gray-600 font-inter">Años de Experiencia</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold luxury-text font-playfair">500+</div>
+                            <div class="text-gray-600 font-inter">Productos Únicos</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="luxury-card aspect-square flex items-center justify-center elegant-shadow">
+                        <div class="text-center p-12">
+                            <div class="font-playfair text-8xl font-light luxury-text mb-6">M</div>
+                            <div class="font-playfair text-3xl font-light text-gray-800 mb-4">Mariam</div>
+                            <div class="section-divider w-16 mx-auto"></div>
+                            <div class="font-inter text-sm text-gray-600 uppercase tracking-wider mt-4">
+                                Tradición • Excelencia • Confianza
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="py-20 bg-gradient-to-br from-gray-50 to-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-playfair text-4xl lg:text-5xl font-light text-gray-800 mb-6">
+                    Nuestros Valores
+                </h2>
+                <p class="font-cormorant text-xl text-gray-600 max-w-3xl mx-auto">
+                    Los principios que guían cada corte, cada selección, cada momento en nuestra carnicería
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="luxury-card group text-center space-y-6 p-8 hover-lift transition-all duration-500">
+                    <div class="flex justify-center">
+                        <i class="fas fa-award text-5xl luxury-text"></i>
+                    </div>
+                    <h3 class="font-playfair text-2xl font-light text-gray-800">Calidad Premium</h3>
+                    <p class="font-inter text-gray-600 leading-relaxed">
+                        Seleccionamos únicamente los mejores productos, garantizando frescura y sabor excepcionales.
+                    </p>
+                </div>
+
+                <div class="luxury-card group text-center space-y-6 p-8 hover-lift transition-all duration-500">
+                    <div class="flex justify-center">
+                        <i class="fas fa-leaf text-5xl luxury-text"></i>
+                    </div>
+                    <h3 class="font-playfair text-2xl font-light text-gray-800">Certificación Halal</h3>
+                    <p class="font-inter text-gray-600 leading-relaxed">
+                        Todos nuestros productos cumplen con los más estrictos estándares halal.
+                    </p>
+                </div>
+
+                <div class="luxury-card group text-center space-y-6 p-8 hover-lift transition-all duration-500">
+                    <div class="flex justify-center">
+                        <i class="fas fa-utensils text-5xl luxury-text"></i>
+                    </div>
+                    <h3 class="font-playfair text-2xl font-light text-gray-800">Maestría Artesanal</h3>
+                    <p class="font-inter text-gray-600 leading-relaxed">
+                        Técnicas tradicionales transmitidas de generación en generación.
+                    </p>
+                </div>
+
+                <div class="luxury-card group text-center space-y-6 p-8 hover-lift transition-all duration-500">
+                    <div class="flex justify-center">
+                        <i class="fas fa-shield-alt text-5xl luxury-text"></i>
+                    </div>
+                    <h3 class="font-playfair text-2xl font-light text-gray-800">Transparencia Total</h3>
+                    <p class="font-inter text-gray-600 leading-relaxed">
+                        Conoce el origen de cada producto con transparencia completa.
+                    </p>
+                </div>
+
+                <div class="luxury-card group text-center space-y-6 p-8 hover-lift transition-all duration-500">
+                    <div class="flex justify-center">
+                        <i class="fas fa-star text-5xl luxury-text"></i>
+                    </div>
+                    <h3 class="font-playfair text-2xl font-light text-gray-800">Servicio Excepcional</h3>
+                    <p class="font-inter text-gray-600 leading-relaxed">
+                        Atención personalizada y asesoramiento experto para cada cliente.
+                    </p>
+                </div>
+
+                <div class="luxury-card group text-center space-y-6 p-8 hover-lift transition-all duration-500">
+                    <div class="flex justify-center">
+                        <i class="fas fa-magic text-5xl luxury-text"></i>
+                    </div>
+                    <h3 class="font-playfair text-2xl font-light text-gray-800">Innovación Constante</h3>
+                    <p class="font-inter text-gray-600 leading-relaxed">
+                        Explorando nuevas técnicas para enriquecer tu experiencia culinaria.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Selection Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="text-center mb-16">
+                <div class="halal-badge mb-4">Selección Premium</div>
+                <h2 class="font-playfair text-4xl lg:text-5xl font-light text-gray-800 mb-6">
+                    Excelencia Curada
+                </h2>
+                <div class="section-divider w-24 mx-auto"></div>
+                <p class="font-cormorant text-xl text-gray-600 max-w-3xl mx-auto mt-6">
+                    Descubra nuestra colección exclusiva de productos halal premium, cada uno seleccionado por su calidad excepcional y herencia artesanal.
+                </p>
+            </div>
+
+            <!-- Premium Meats -->
+            <div class="mb-20">
+                <div class="text-center mb-12">
+                    <h3 class="font-playfair text-2xl font-semibold text-gray-800 mb-4">
+                        Cortes Premium
+                    </h3>
+                    <div class="section-divider w-16 mx-auto"></div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="product-card hover-lift">
+                        <img src="https://page1.genspark.site/v1/base64_upload/6b1c65ad802e62040fd992a47d294c07" 
+                             alt="Cortes Frescos Premium" 
+                             class="product-image">
+                        <div class="p-8">
+                            <h4 class="font-playfair text-xl font-semibold text-gray-800 mb-3">
+                                Cortes Frescos Artesanales
+                            </h4>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                                Cortes de primera calidad seleccionados a mano de carne de res, cordero y carnes especiales. Cada pieza representa nuestro compromiso con la calidad excepcional y la certificación halal.
+                            </p>
+                            <div class="flex justify-between items-center">
+                                <div class="halal-badge text-xs">
+                                    Certificado Halal
+                                </div>
+                                <div class="text-xs text-gray-500 font-inter">
+                                    Fresco del Día
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card hover-lift">
+                        <img src="https://page1.genspark.site/v1/base64_upload/bbaf8511613f1cae9fe1f63d8ae86f0a" 
+                             alt="Charcutería Artesanal" 
+                             class="product-image">
+                        <div class="p-8">
+                            <h4 class="font-playfair text-xl font-semibold text-gray-800 mb-3">
+                                Charcutería Artesanal
+                            </h4>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                                Los métodos artesanales tradicionales se encuentran con las técnicas contemporáneas en nuestra exclusiva selección de charcutería, elaborada con especias de primera calidad y recetas consagradas.
+                            </p>
+                            <div class="flex justify-between items-center">
+                                <div class="halal-badge text-xs">
+                                    Hecho a Mano
+                                </div>
+                                <div class="text-xs text-gray-500 font-inter">
+                                    Firma
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card hover-lift">
+                        <img src="https://page1.genspark.site/v1/base64_upload/574e459d9dabda26d5c7849b31ef5e58" 
+                             alt="Aves Premium" 
+                             class="product-image">
+                        <div class="p-8">
+                            <h4 class="font-playfair text-xl font-semibold text-gray-800 mb-3">
+                                Aves Premium
+                            </h4>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                                Aves de corral y preparaciones especiales para paladares exigentes. Preparaciones personalizadas disponibles para ocasiones y celebraciones especiales.
+                            </p>
+                            <div class="flex justify-between items-center">
+                                <div class="halal-badge text-xs">
+                                    De Corral
+                                </div>
+                                <div class="text-xs text-gray-500 font-inter">
+                                    A Medida
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gourmet Selection -->
+            <div class="mb-20">
+                <div class="text-center mb-12">
+                    <h3 class="font-playfair text-2xl font-semibold text-gray-800 mb-4">
+                        Selección Gourmet
+                    </h3>
+                    <div class="section-divider w-16 mx-auto"></div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="product-card hover-lift md:col-span-3">
+                        <img src="https://page1.genspark.site/v1/base64_upload/18b600d7dbe3e0f35ae078af0e2fb1f2" 
+                             alt="Despensa Gourmet" 
+                             class="product-image gourmet-image">
+                        <div class="p-8">
+                            <h4 class="font-playfair text-xl font-semibold text-gray-800 mb-3">
+                                Despensa Curada
+                            </h4>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                                Una selección exclusiva de productos básicos de despensa de primera calidad, especias artesanales y productos de temporada para complementar su excelencia culinaria.
+                            </p>
+                            <div class="grid grid-cols-2 gap-4 text-xs text-gray-600 font-inter">
+                                <div class="flex items-center">
+                                    <i class="fas fa-leaf mr-2 text-green-600"></i>Selección Orgánica
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-star mr-2 text-yellow-500"></i>Especias Premium
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-seedling mr-2 text-green-600"></i>Frutas de Temporada
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-award mr-2 luxury-text"></i>Productos Artesanales
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-playfair text-4xl lg:text-5xl font-light text-gray-800 mb-6">
+                    Lo Que Dicen Nuestros Clientes
+                </h2>
+                <p class="font-cormorant text-xl text-gray-600 max-w-3xl mx-auto">
+                    La confianza y satisfacción de nuestros clientes es nuestro mayor orgullo
+                </p>
+                <div class="section-divider w-24 mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card hover-lift">
+                    <div class="flex items-center mb-4">
+                        <div class="star-rating flex text-lg">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="font-cormorant text-gray-700 mb-6 text-lg leading-relaxed">
+                        La calidad de la carne es excepcional. Como familia musulmana, es difícil encontrar 
+                        productos halal de esta calidad. Mariam siempre nos atiende con profesionalidad y cariño.
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                            A
+                        </div>
+                        <div>
+                            <div class="font-medium text-gray-800">Ahmed Hassan</div>
+                            <div class="text-sm text-gray-500">Cliente desde 2019</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card hover-lift">
+                    <div class="flex items-center mb-4">
+                        <div class="star-rating flex text-lg">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="font-cormorant text-gray-700 mb-6 text-lg leading-relaxed">
+                        El cordero que compramos para el Eid fue perfecto. La carne estaba fresca, 
+                        bien preparada y el sabor era extraordinario. Sin duda, la mejor carnicería de Murcia.
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                            F
+                        </div>
+                        <div>
+                            <div class="font-medium text-gray-800">Fatima López</div>
+                            <div class="text-sm text-gray-500">Cliente desde 2020</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card hover-lift">
+                    <div class="flex items-center mb-4">
+                        <div class="star-rating flex text-lg">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="font-cormorant text-gray-700 mb-6 text-lg leading-relaxed">
+                        Productos artesanales de primera calidad. El chorizo halal es una delicia única. 
+                        La atención personalizada hace que cada visita sea especial.
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                            M
+                        </div>
+                        <div>
+                            <div class="font-medium text-gray-800">Mohammed Benali</div>
+                            <div class="text-sm text-gray-500">Cliente desde 2018</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Section -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 pt-16 border-t border-gray-200">
+                <div class="text-center">
+                    <div class="text-4xl font-bold luxury-text font-playfair mb-2">98%</div>
+                    <div class="text-gray-600 font-inter">Satisfacción Cliente</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold luxury-text font-playfair mb-2">5★</div>
+                    <div class="text-gray-600 font-inter">Valoración Media</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold luxury-text font-playfair mb-2">1200+</div>
+                    <div class="text-gray-600 font-inter">Familias Atendidas</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold luxury-text font-playfair mb-2">25</div>
+                    <div class="text-gray-600 font-inter">Años de Confianza</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-8">
+                    <h2 class="font-playfair text-4xl lg:text-5xl font-light text-gray-800">
+                        Contáctanos
+                    </h2>
+                    <p class="font-cormorant text-xl text-gray-600 leading-relaxed">
+                        Estamos aquí para responder a todas tus preguntas y ayudarte a encontrar 
+                        los mejores productos para tus necesidades culinarias más exigentes.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center text-gray-800 text-lg font-inter">
+                            <div class="w-12 h-12 luxury-gradient flex items-center justify-center mr-4 rounded-lg">
+                                <i class="fas fa-map-marker-alt text-white"></i>
+                            </div>
+                            <span>C. Poeta Miguel Hernandez, 30006 Murcia, Spain</span>
+                        </div>
+                        <div class="flex items-center text-gray-800 text-lg font-inter">
+                            <div class="w-12 h-12 luxury-gradient flex items-center justify-center mr-4 rounded-lg">
+                                <i class="fas fa-phone text-white"></i>
+                            </div>
+                            <span>+34 632 85 94 00</span>
+                        </div>
+                        <div class="flex items-center text-gray-800 text-lg font-inter">
+                            <div class="w-12 h-12 luxury-gradient flex items-center justify-center mr-4 rounded-lg">
+                                <i class="fas fa-phone text-white"></i>
+                            </div>
+                            <span>0034868083278 (fijo)</span>
+                        </div>
+                        
+                        <div class="flex items-center text-gray-800 text-lg font-inter">
+                            <div class="w-12 h-12 luxury-gradient flex items-center justify-center mr-4 rounded-lg">
+                                <i class="fas fa-clock text-white"></i>
+                            </div>
+                            <span>Lunes a Domingo: 9:00 - 21:00</span>
+                        </div>
+                    </div>
+
+                    
+                </div>
+                
+                <div>
+                    <div class="luxury-card p-8 elegant-shadow">
+                        <div class="w-full h-80 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center text-gray-500 text-xl rounded-lg">
+                            <div class="text-center">
+                                <i class="fas fa-map-marked-alt text-4xl mb-4 luxury-text"></i>
+                                <p class="font-inter font-medium">Ubicación en Murcia</p>
+                                <p class="text-sm text-gray-400 mt-2">Encuéntranos en el corazón de la ciudad</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-premium py-16">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <!-- Company Info -->
+                <div class="lg:col-span-2 space-y-6">
+                    <div class="font-playfair text-2xl font-light text-white mb-4">
+                        <span class="luxury-text">Carnicería Charcutería</span>
+                        <div class="text-lg italic text-yellow-300 mt-1">Mariam</div>
+                    </div>
+                    <p class="text-white text-opacity-70 leading-relaxed font-cormorant max-w-lg">
+                        Tradición artesanal en el corazón de Murcia. Cada corte es una promesa de calidad 
+                        excepcional y sabor auténtico que honra nuestra herencia culinaria.
+                    </p>
+                    <div class="flex space-x-4">
+                        <div class="halal-badge">
+                            <i class="fas fa-star mr-1"></i>Certificado Halal
+                        </div>
+                        <div class="halal-badge">
+                            <i class="fas fa-award mr-1"></i>Calidad Premium
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="space-y-4">
+                    <h3 class="font-playfair text-xl font-light text-white mb-4">Navegación</h3>
+                    <div class="space-y-3">
+                        <a href="#home" class="footer-link block">Inicio</a>
+                        <a href="#catalog" class="footer-link block">Catálogo</a>
+                        <a href="#about" class="footer-link block">Nosotros</a>
+                        <a href="#testimonials" class="footer-link block">Testimonios</a>
+                        <a href="#contact" class="footer-link block">Contacto</a>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="space-y-4">
+                    <h3 class="font-playfair text-xl font-light text-white mb-4">Contacto</h3>
+                    <div class="space-y-3 text-white text-opacity-70">
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-yellow-300 mr-3"></i>
+                            <span class="text-sm">C. Poeta Miguel Hernandez, 30006 Murcia, Spain</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-yellow-300 mr-3"></i>
+                            <span class="text-sm">+34 632 85 94 00</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-yellow-300 mr-3"></i>
+                            <span class="text-sm">0034868083278 (fijo)</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-clock text-yellow-300 mr-3"></i>
+                            <span class="text-sm">Lun-Dom: 9:00-21:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-divider"></div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                
+                
+                <p class="text-white text-opacity-70 text-sm font-inter">
+                    &copy; 1997 Carnicería Charcutería Mariam. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation functionality
+        const navbar = document.getElementById('navbar');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const hamburger = document.querySelector('.hamburger');
+        let isMenuOpen = false;
+
+        // Scroll effect for navbar
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        mobileMenuBtn.addEventListener('click', function() {
+            isMenuOpen = !isMenuOpen;
+            
+            if (isMenuOpen) {
+                mobileMenu.classList.add('open');
+                hamburger.classList.add('open');
+                document.body.style.overflow = 'hidden';
+            } else {
+                mobileMenu.classList.remove('open');
+                hamburger.classList.remove('open');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Close mobile menu when clicking on links
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.remove('open');
+                hamburger.classList.remove('open');
+                document.body.style.overflow = '';
+                isMenuOpen = false;
+            });
+        });
+
+        // Active navigation highlighting
+        const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
+        const sections = document.querySelectorAll('section[id]');
+
+        function updateActiveNav() {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('data-section') === current) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveNav);
+
+        // Smooth scrolling function
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                const offsetTop = element.offsetTop - 80;
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        // Add click event listeners to navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                scrollToSection(targetId);
+            });
+        });
+
+        // Product filtering functionality
+        const filterButtons = document.querySelectorAll('.filter-button');
+        const productCards = document.querySelectorAll('.product-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const category = this.getAttribute('data-category');
+                
+                // Update active filter button
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Filter products with animation
+                productCards.forEach(card => {
+                    const cardCategories = card.getAttribute('data-category').split(' ');
+                    
+                    if (category === 'all' || cardCategories.includes(category)) {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'scale(1)';
+                        }, 100);
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'scale(0.8)';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.hover-lift, .product-card, .testimonial-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease-out';
+            observer.observe(el);
+        });
+
+        // Heart icon toggle for favorites
+        document.querySelectorAll('.fa-heart').forEach(heart => {
+            heart.addEventListener('click', function() {
+                if (this.classList.contains('fas')) {
+                    this.classList.remove('fas');
+                    this.classList.add('far');
+                    this.style.color = '#9CA3AF';
+                } else {
+                    this.classList.remove('far');
+                    this.classList.add('fas');
+                    this.style.color = '#D4AF37';
+                }
+            });
+        });
+
+        // Add loading animation
+        window.addEventListener('load', function() {
+            document.body.style.opacity = '1';
+            document.body.style.transition = 'opacity 0.5s ease-in-out';
+            
+            // Initialize animations
+            updateActiveNav();
+        });
+
+        // Set initial body opacity
+        document.body.style.opacity = '0';
+
+        // Touch-friendly enhancements for mobile
+        if ('ontouchstart' in window) {
+            // Add touch feedback to buttons
+            document.querySelectorAll('.premium-button, .filter-button, .nav-link').forEach(element => {
+                element.addEventListener('touchstart', function() {
+                    this.style.transform = 'scale(0.95)';
+                });
+                
+                element.addEventListener('touchend', function() {
+                    this.style.transform = '';
+                });
+            });
+        }
+
+        // Optimize performance by throttling scroll events
+        let ticking = false;
+        
+        function updateOnScroll() {
+            updateActiveNav();
+            ticking = false;
+        }
+        
+        window.addEventListener('scroll', function() {
+            if (!ticking) {
+                requestAnimationFrame(updateOnScroll);
+                ticking = true;
+            }
+        });
+    </script>
+</body>
+</html>
